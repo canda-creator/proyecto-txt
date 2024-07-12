@@ -1,0 +1,244 @@
+
+/*MÚSICA.HTML*/
+.nav__musica{
+    background: #c4cccc;
+
+}
+.main__musica{
+    background: #c4cccc;
+}
+
+
+
+.h2__discography h2 {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #333;
+    text-align: center;
+    font-size: 40pt;
+    padding-bottom: 100px;
+    padding-top: 40px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .1em solid orange; /* Grosor de la línea reducido */
+    width: 12.5ch; /* Ancho aproximado para llegar a la posición deseada */
+    margin: 0 auto; /* Centra el h2 */
+    animation: typing 4s steps(13, end), blink-caret 0.5s step-end 4s forwards; /* Aplica la animación de escritura y parpadeo */
+}
+
+@keyframes typing {
+    from { width: 0 } /* Comienza con un ancho de 0 */
+    to { width: 12.5ch } /* Ancho para llegar a la posición deseada */
+}
+
+@keyframes blink-caret {
+    0%, 100% { border-color: transparent } /* Oculta el cursor al principio y al final */
+    50% { border-color: orange; } /* Muestra el cursor en la mitad de la animación */
+}
+
+
+
+
+
+
+
+
+
+
+.galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 20px;
+} 
+
+.imagen-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.imagen-galeria{
+    width: 322px;
+    height: 322px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.imagen-container:hover .imagen-galeria{
+    opacity:0.8;
+    cursor: pointer;
+}
+
+.texto-hover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; 
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+}
+
+.imagen-container:hover .texto-hover {
+    opacity: 1;
+}
+
+/* Resto del código omitido para mantener el enfoque en la nueva funcionalidad */
+.texto-hover::before {
+    content: url('../img/more_view.png');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0); /* Fondo inicialmente transparente */
+    transition: background-color 0.3s ease-in-out; /* Transición suave para el fondo */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.fab.fa-instagram.footer{
+    font-size: 25px;
+}
+
+
+.fab.fa-twitter.footer{
+    font-size: 25px;
+}
+
+.fab.fa-youtube.footer{ 
+    font-size: 25px;
+}
+
+
+.fab.fa-facebook.footer{
+    font-size: 25px;
+}
+
+.fab.fa-tiktok.footer{ 
+    font-size: 25px;
+}
+
+
+.footer-text{
+    font-family: 'Montserrat';
+    text-align: right;
+    font-size: 10PX;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+/* Estilo específico para los enlaces con la clase "footer-link" */
+a.footer-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Estilo específico para los iconos dentro de los enlaces */
+a.footer-link .footer {
+    color: #000000; /* Puedes cambiar el color aquí */
+}
+
+/* Estilo específico para los enlaces cuando están en estado de hover */
+a.footer-link:hover {
+    text-decoration: underline;
+}
+
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    grid-area: footer;
+    background-color: rgb(95, 120, 202);
+    padding: 30px;
+    text-align: center;
+    color: #000;
+}
+
+.X {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.X i {
+    margin-right: 20px;
+}
+
+
+
+
+.image-with-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.image-with-text:hover {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.image-container {
+    flex: 1;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.text {
+    flex: 1;
+    padding: 20px;
+}
+
+.text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #ff6600; /* Color del título */
+}
+
+.text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.text a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.text a:hover {
+    color: #ff6600;
+}
